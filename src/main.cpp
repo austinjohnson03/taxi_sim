@@ -8,7 +8,7 @@ int main() {
   std::srand(static_cast<unsigned>(std::time(nullptr)));
 
   sf::RenderWindow window(sf::VideoMode(1280, 720), "Car Demo");
-  window.setFramerateLimit(60);
+  window.setFramerateLimit(144);
 
   sf::Font font;
   if (!font.loadFromFile("Roboto-Medium.ttf")) {
@@ -24,7 +24,7 @@ int main() {
 
   Car car(400.f, 300.f);
   car.accelerate(100.f);
-  car.steer(0.8f);
+  car.turn(0.8f);
 
   sf::Clock clock;
   while (window.isOpen()) {

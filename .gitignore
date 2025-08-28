@@ -1,1 +1,48 @@
-*.ttf
+# Compiled object files
+*.o
+*.obj
+
+# Executables / binaries
+*.out
+*.exe
+*.app
+*.elf
+*.bin
+bin/*
+obj/*
+
+# Libraries
+*.a
+*.so
+*.dylib
+*.lib
+*.dll
+
+# Makefile-generated files
+*.d
+*.dSYM/
+*.d.o
+
+# CMake build directories (if any)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile.user
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.code-workspace
+*.suo
+*.user
+*.userosscache
+*.sln
+*.VC.db
+
+# MacOS system files
+.DS_Store
+
+# Linux temporary files
+*~
+*.swp
+
