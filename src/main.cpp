@@ -1,11 +1,14 @@
 #include <SFML/Graphics.hpp>
 #include "car.h"
+#include "graph.h"
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
 
 int main() {
   std::srand(static_cast<unsigned>(std::time(nullptr)));
+
+  Graph city;
 
   sf::RenderWindow window(sf::VideoMode(1280, 720), "Car Demo");
   window.setFramerateLimit(144);
@@ -37,7 +40,8 @@ int main() {
     float dt = clock.restart().asSeconds();
     car.update(dt, window);
 
-    window.clear(sf::Color::Black);
+    window.clear(sf::Color(17, 64, 0));
+    city.draw(window);
     car.draw(window);
     info_text.setString(
         "Velocity: " + std::to_string(car.get_velocity()) + "\n" +
